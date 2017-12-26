@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import HelloWorld from './HelloWorld';
+import Example from './Example';
 
 class App extends Component {
 
@@ -31,6 +32,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <HelloWorld />
+        <Example />
       </div>
     );
   }
