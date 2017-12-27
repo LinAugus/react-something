@@ -1,4 +1,4 @@
-import { instantiateReactComponent } from './vdom'
+import { instantiateReactComponent } from './vdom';
 
 const ReactDOM = {
   render: function (nextElement, container, callback) {
