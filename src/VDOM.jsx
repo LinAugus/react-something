@@ -15,19 +15,24 @@ var tree = el(
 
 var root = tree.render();
 
-var newTree = el(
-  'div', { 'id': 'container' }, 
-  [
-    el('h1', { style: 'color: red' }, [ 'simple virtal dom' ]),
-    el('p', [ 'Hello, virtual-dom' ]),
-    el('ul', [ el('li', null, ['hahah']), el('li') ])
-  ]);
+setTimeout(() => {
+  var newTree = el(
+    'div', { 'id': 'container' }, 
+    [
+      el('h1', { style: 'color: red' }, [ 'simple virtal dom' ]),
+      el('p', [ 'Hello, virtual-dom' ]),
+      el('ul', [ el('li', null, ['hahah']), el('li') ])
+    ]);
+    
+    
+  var patches = diff(tree, newTree);
   
+  console.log('patches:', patches);
   
-var patches = diff(tree, newTree);
+  patch(root, patches);
 
-console.log('patches:', patches);
+  console.log('change', root)
 
-patch(root, patches);
+}, 5000);
 
 export default root;
