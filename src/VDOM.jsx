@@ -9,7 +9,7 @@ var tree = el(
   [
     el('h1', { style: 'color: blue' }, [ 'simple virtal dom' ]),
     el('p', [ 'Hello, virtual-dom' ]),
-    el('ul', [ el('li', null, ['hahah']) ])
+    el('ul', [ el('li', null, [ 'hahah' ]) ])
   ]);
 
 
@@ -21,7 +21,7 @@ setTimeout(() => {
     [
       el('h1', { style: 'color: red' }, [ 'simple virtal dom' ]),
       el('p', [ 'Hello, virtual-dom' ]),
-      el('ul', [ el('li', null, ['hahah']), el('li') ])
+      el('ul', [ el('li', null, [ 'hahah' ]), el('li') ])
     ]);
     
     
@@ -31,7 +31,7 @@ setTimeout(() => {
   
   patch(root, patches);
 
-  console.log('change', root)
+  console.log('change', root);
 
 }, 5000);
 
